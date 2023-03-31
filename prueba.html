@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div id="change" style="height:20px; background-color:#000000">
+    change
+</div>
+<select name="bgcolor" id="bgcolor" onchange="colorDiv()"> 
+    <option class="1" value="0"> Grey</option>
+    <option class="2" value="1"> White </option>
+    <option class="3" value="2"> Blue</option>
+    <option class="4" value="3"> Cian</option>
+    <option class="5" value="4"> Green</option>
+</select>
+<p id="demo"></p>       
+
+<script>
+function colorDiv(){
+      var selection = document.getElementById('bgcolor').selectedIndex;
+      var div = document.getElementById('change');
+      div.style.backgroundColor='green';
+      var colors = ["grey","white","blue","cian","green"];
+
+      document.getElementById("demo").innerHTML = colors[selection]; 
+
+      switch (selection){
+          case 0:
+            div.style.backgroundColor='grey';
+            break;
+          case 1:
+            div.style.backgroundColor='white';  
+            break;
+          case 2:
+            div.style.backgroundColor='blue';
+            break;
+          case 3:
+            div.style.backgroundColor='cian';
+            break;
+          case 4:
+            div.style.backgroundColor='green';
+            break;
+        default:
+            div.style.backgroundColor='purple';
+       }
+   };
+</script>
+    
+</body>
+</html>
